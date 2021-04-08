@@ -3,7 +3,6 @@ import get from "axios";
 import { turnDateToString } from "./utilityFunctions";
 import { NBAGame } from "../types/types";
 
-
 export const getGamesForDate = (date: Date): AxiosPromise<any> => {
     const dateAsString = turnDateToString(date);
     const url = `https://data.nba.net/10s/prod/v1/${dateAsString}/scoreboard.json`
